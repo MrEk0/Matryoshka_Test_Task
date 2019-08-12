@@ -38,6 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3064790583
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Glass
+    uniqueID: 3611950289
+    locked: 0
+  - name: Utensil
+    uniqueID: 969593735
+    locked: 0
+  - name: Food
+    uniqueID: 4183490709
+    locked: 0
+  - name: UI
+    uniqueID: 387069639
     locked: 0
