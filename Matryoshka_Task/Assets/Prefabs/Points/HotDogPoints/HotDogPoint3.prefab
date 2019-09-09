@@ -10,17 +10,17 @@ PrefabInstance:
     - target: {fileID: 7211241523323814389, guid: f9140fc9053d17248b37bdff9e985a61,
         type: 3}
       propertyPath: m_Name
-      value: HotDogPoint1
+      value: HotDogPoint3
       objectReference: {fileID: 0}
     - target: {fileID: 7211241523323814390, guid: f9140fc9053d17248b37bdff9e985a61,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.396
       objectReference: {fileID: 0}
     - target: {fileID: 7211241523323814390, guid: f9140fc9053d17248b37bdff9e985a61,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.434
       objectReference: {fileID: 0}
     - target: {fileID: 7211241523323814390, guid: f9140fc9053d17248b37bdff9e985a61,
         type: 3}
