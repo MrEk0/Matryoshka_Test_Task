@@ -11,6 +11,7 @@ public class Meat : MonoBehaviour
         if(isReady)
         {
             FindObjectOfType<BurgerDesk>().GetMeat();
+            Destroy(gameObject);
         }
 
         //if it is ready we can remove on the bun
