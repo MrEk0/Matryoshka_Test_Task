@@ -1,24 +1,29 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MeatBox : MonoBehaviour
 {
     [SerializeField] GameObject rawMeatPrefab;
-    [SerializeField] Transform[] rawMeatPoints;
+    [SerializeField] List<Transform> rawMeatPoints;
 
-    //private bool isPlaceEmpty = true;
-    //private int pointsCount = 3;
+    private void Awake()//to make the toggle always true at the beginning
+    {
+        foreach (Transform point in rawMeatPoints)
+        {
+            point.GetComponent<MeatPoint>().isEmpty = true;
+        }
+    }
 
     private void OnMouseDown()
     {
         //look for a place
         GameObject place= LookForAPlace();
-        //Debug.Log(place);
         if (place!=null)
         {
-            GameObject meat= Instantiate(rawMeatPrefab, place.transform.position, place.transform.rotation);
-            place.GetComponent<MeatPoint>().isEmpty=false;
+            GameObject meat = Instantiate(rawMeatPrefab, place.transform.position, place.transform.rotation);
+            place.GetComponent<MeatPoint>().isEmpty = false;
             //start cook
         }
     }
@@ -27,10 +32,11 @@ public class MeatBox : MonoBehaviour
     {
         foreach (Transform point in rawMeatPoints)
         {
-            if(point.gameObject.GetComponent<MeatPoint>().isEmpty==true)
+            if (point.GetComponent<MeatPoint>().isEmpty==true)
             {
                 return point.gameObject;
             }
+            Debug.Log(point.GetComponent<MeatPoint>().isEmpty+"  isempty");
         }
 
         return null;
